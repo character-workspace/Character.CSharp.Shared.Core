@@ -15,4 +15,9 @@
       <ProjectReference Include="..\Shared.Core\Shared.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Application\" />
+      <Folder Include="Infrastructure\" />
+    </ItemGroup>
+
 </Project>
