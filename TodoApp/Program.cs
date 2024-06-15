@@ -1,9 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using TodoApp.Infrastructure.Persistence;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<TodoAppDbContext>(opts => opts.UseSqlServer("Server=localhost,1433;Database=powx;User Id=sa;Password=3141592654Vv@123;TrustServerCertificate=True;"));
 
 var app = builder.Build();
 

@@ -26,10 +26,10 @@ public class BaseAuditLogRule : BaseNoParamValidator<BaseAuditLog, BaseAuditLogR
     public BaseAuditLogRule()
     {
         RuleFor(e => e.Id)
-            .SetValidator(StringIdRules.Instance);
+            .SetValidator(StringIdRule.Instance);
 
         RuleFor(e => e.AuthorId)
-            .SetValidator(StringIdRules.Instance);
+            .SetValidator(StringIdRule.Instance);
         
         RuleFor(e => e.HappenedAt)
             .SetValidator(CreatedAtRule.Instance);
