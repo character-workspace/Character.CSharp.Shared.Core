@@ -2,4 +2,4 @@
 
 namespace Shared.Core.Drivens.Persistence.EFCore;
 
-public abstract class AppDbContext(DbContextOptions options) : DbContext(options);
+public abstract class AppDbContext<TDerived>(DbContextOptions options) : DbContext(options);

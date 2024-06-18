@@ -10,6 +10,6 @@ public class NoSpaceString : BaseNoParamValidator<string, NoSpaceString>
     {
         RuleFor(s => s)
             .Must(s => !s.Contains(' '))
-            .WithErrorCode(StringErrors.NoSpace);
+            .WithErrorCode(StringErrors.ShouldHaveNoSpace);
     }
 }

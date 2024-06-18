@@ -10,6 +10,6 @@ public class NoSpaceAroundString : BaseNoParamValidator<string, NoSpaceAroundStr
     {
         RuleFor(s => s)
             .Must(s => !(s.StartsWith(' ') || s.EndsWith(' ')))
-            .WithErrorCode(StringErrors.NoSpaceAround);
+            .WithErrorCode(StringErrors.ShouldHaveNoSpaceAround);
     }
 }

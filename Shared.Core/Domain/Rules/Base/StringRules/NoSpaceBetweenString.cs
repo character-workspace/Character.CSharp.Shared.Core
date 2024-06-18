@@ -10,6 +10,6 @@ public class NoSpaceBetweenString : BaseNoParamValidator<string, NoSpaceBetweenS
     {
         RuleFor(s => s)
             .Must(s => !s.Trim().Contains(' '))
-            .WithErrorCode(StringErrors.NoSpaceBetween);
+            .WithErrorCode(StringErrors.ShouldHaveNoSpaceBetween);
     }
 }

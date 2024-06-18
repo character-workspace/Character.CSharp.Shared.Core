@@ -18,7 +18,8 @@ public class BaseEntityRule : BaseNoParamValidator<BaseEntity, BaseEntityRule>
         RuleFor(e => e.Id)
             .SetValidator(StringIdRule.Instance);
 
-        RuleFor(e => e.CreatedAt)
-            .SetValidator(CreatedAtRule.Instance);
+        // TODO maybe we don't need this
+        // RuleFor(e => e.CreatedAt)
+        //     .SetValidator(CreatedAtRule.Instance);
     }
 }
