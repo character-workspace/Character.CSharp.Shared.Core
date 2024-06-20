@@ -2,12 +2,9 @@
 
 namespace Shared.Core.Drivens.Persistence.Repositories;
 
-public interface IBaseRepository<out TEntity> where TEntity : BaseEntity
+public interface IBaseRepository<TEntity> where TEntity : BaseEntity
 {
-    TEntity GetById(string id);
+    Task<TEntity?> GetByIdAsync(string id);
 
-    TEntity GetAll();
-    
-    // TODO
-    // TEntity GetManyWithFilter();
+    Task<IEnumerable<TEntity>> GetAllAsync();
 }

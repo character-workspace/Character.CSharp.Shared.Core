@@ -4,7 +4,7 @@ using TodoApp.Domain.Entities;
 
 namespace TodoApp.Infrastructure.Persistence;
 
-public class TodoAppDbContext(DbContextOptions options) : AppDbContext<TodoAppDbContext>(options)
+public class TodoAppDbContext(DbContextOptions options) : AppDbContext(options)
 {
     public required DbSet<Todo> Todos { get; init; }
     
