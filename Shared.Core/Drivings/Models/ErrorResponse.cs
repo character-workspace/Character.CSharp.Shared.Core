@@ -1,4 +1,5 @@
 ﻿using FluentValidation.Results;
+using Shared.Core.Domain.Exceptions;
 
 namespace Shared.Core.Drivings.Models;
 
@@ -17,6 +18,20 @@ public class ErrorResponse
                     ErrorCode = failure.ErrorCode
                 })
             ).ToList()
+        };
+    }
+    
+    public static ErrorResponse ToErrorResponse(string fieldName, IExcHasErrorCode exc)
+    {
+        return new ErrorResponse
+        {
+            Errors =
+            [
+                new KeyValuePair<string, Error>("", new Error
+                {
+                    Field = fieldName, ErrorCode = exc.ErrorCode
+                })
+            ]
         };
     }
 }
