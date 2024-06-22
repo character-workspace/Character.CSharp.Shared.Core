@@ -27,7 +27,7 @@ public class ErrorResponse
         {
             Errors =
             [
-                new KeyValuePair<string, Error>("", new Error
+                new KeyValuePair<string, Error>(fieldName, new Error
                 {
                     Field = fieldName, ErrorCode = exc.ErrorCode
                 })
