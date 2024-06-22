@@ -4,7 +4,7 @@ using Shared.Core.Domain.Validators;
 
 namespace Shared.Core.Domain.Rules.Base.StringRules;
 
-public class RequiredString : BaseNoParamValidator<string, NoSpaceString>
+public class RequiredString : BaseNoParamValidator<string, RequiredString>
 {
     public RequiredString()
     {

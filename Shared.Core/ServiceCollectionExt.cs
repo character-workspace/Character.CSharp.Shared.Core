@@ -6,7 +6,7 @@ namespace Shared.Core;
 
 public static class ServiceCollectionExt
 {
-    // rename this to add SharedCoreService
+    // rename this to AddSharedCoreService
     public static void AddCoreServices(this IServiceCollection services, Assembly currentAssembly)
     {
         ValidatorOptions.Global.DefaultRuleLevelCascadeMode = CascadeMode.Stop;
