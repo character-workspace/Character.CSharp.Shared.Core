@@ -14,7 +14,6 @@ public class ErrorResponse
                 => new KeyValuePair<string, Error>(failure.PropertyName, new Error
                 {
                     Field = failure.PropertyName,
-                    AttemptData = failure.AttemptedValue,
                     ErrorCode = failure.ErrorCode
                 })
             ).ToList()

@@ -8,4 +8,6 @@ public static class StringErrors
     public const string ShouldHaveNoSpaceAround = nameof(ShouldHaveNoSpaceAround);
     public const string ShouldHaveNoSpaceBetween = nameof(ShouldHaveNoSpaceBetween);
     public const string ShouldHaveNoSpace = nameof(ShouldHaveNoSpace);
+    
+    public const string AlreadyTaken = nameof(AlreadyTaken);
 }
