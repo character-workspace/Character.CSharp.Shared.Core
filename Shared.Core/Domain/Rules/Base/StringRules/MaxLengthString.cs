@@ -8,7 +8,7 @@ public class MaxLengthString : AbstractValidator<string>
     public MaxLengthString(int maxLength)
     {
         RuleFor(s => s)
-            .MaximumLength(maxLength)
-            .WithErrorCode(nameof(StringErrors.ExceedMaxLength));
+            .MaximumLength(maxLength)   
+            .WithErrorCode(StringErrors.ExceedMaxLength);
     }
 }

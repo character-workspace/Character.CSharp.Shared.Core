@@ -9,9 +9,7 @@ public class RequiredGuid : BaseNoParamValidator<Guid, RequiredGuid>
     public RequiredGuid()
     {
         RuleFor(g => g)
-            .NotNull()
-            .WithErrorCode(nameof(CommonErrors.Required))
             .NotEqual(Guid.Empty)
-            .WithErrorCode(nameof(CommonErrors.Required));
+            .WithErrorCode(CommonErrors.Required);
     }
 }
