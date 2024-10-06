@@ -1,10 +1,11 @@
-﻿using Shared.Core.Domain.Errors.Base;
-using Shared.Core.Domain.Rules.Base.StringRules;
+﻿using Shared.Core.Domain.Rules.Base.StringRules;
 
 namespace UnitTest.Domain.Rules.Base.StringRules;
 
 public class MaxLengthStringTest
 {
+    #region Unhappy
+
     [Fact]
     public void Validate_ShouldReturnError_WhenStringExceedsMaxLength()
     {
@@ -21,7 +22,7 @@ public class MaxLengthStringTest
         
         // expected
         var expectedErrorCount = 1;
-        var expectedErrorCode = StringErrors.ExceedMaxLength;
+        var expectedErrorCode = nameof(MaxLengthString);
 
         #endregion
         
@@ -38,7 +39,11 @@ public class MaxLengthStringTest
         
         #endregion
     }
-    
+
+    #endregion
+
+    #region Happy
+
     [Fact]
     public void Validate_ShouldSuccess_WhenStringEqualsMaxLength()
     {
@@ -102,4 +107,6 @@ public class MaxLengthStringTest
         
         #endregion
     }
+
+    #endregion
 }

@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using Shared.Core.Domain.Errors.Base;
 
 namespace Shared.Core.Domain.Rules.Base.StringRules;
 
@@ -9,6 +8,6 @@ public class MaxLengthString : AbstractValidator<string>
     {
         RuleFor(s => s)
             .MaximumLength(maxLength)   
-            .WithErrorCode(StringErrors.ExceedMaxLength);
+            .WithErrorCode(nameof(MaxLengthString));
     }
 }

@@ -1,5 +1,4 @@
-﻿using Shared.Core.Domain.Errors.Base;
-using Shared.Core.Domain.Rules.Base.GuidRules;
+﻿using Shared.Core.Domain.Rules.Base.GuidRules;
 
 namespace UnitTest.Domain.Rules.Base.GuidRules;
 
@@ -19,7 +18,7 @@ public class RequiredGuidTest
         var targetTest = new RequiredGuid();
         
         // expected
-        var expectedErrorCode = CommonErrors.Required;
+        var expectedErrorCode = nameof(RequiredGuid);
         var expectedErrorCount = 1;
 
         #endregion

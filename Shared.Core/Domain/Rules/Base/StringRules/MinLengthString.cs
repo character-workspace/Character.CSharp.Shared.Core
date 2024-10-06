@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using Shared.Core.Domain.Errors.Base;
 
 namespace Shared.Core.Domain.Rules.Base.StringRules;
 
@@ -9,6 +8,6 @@ public class MinLengthString : AbstractValidator<string>
     {
         RuleFor(s => s)
             .MinimumLength(minLength)
-            .WithErrorCode(StringErrors.NotReachMinLength);
+            .WithErrorCode(nameof(MinLengthString));
     }
 }
