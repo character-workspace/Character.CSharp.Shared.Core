@@ -4,7 +4,7 @@ using Shared.Core.Drivings.EndPoints.Http.Filters;
 
 namespace Shared.Core.Drivings.EndPoints.Http.Extensions;
 
-public static class RouteHandlerBuilderValidationExts
+public static class RouteHandlerBuilderValidationExt
 {
     public static RouteHandlerBuilder WithRequestValidation<TRequest>(this RouteHandlerBuilder builder)
     {

@@ -2,5 +2,6 @@
 
 public interface IExcHasErrorCode
 {
-    public string ErrorCode { get; }
+    public string Code { get; }
+    public string Message { get; }
 }

@@ -24,4 +24,8 @@
       <ProjectReference Include="..\..\Shared.Core\Shared.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Domain\Rules\Base\" />
+    </ItemGroup>
+
 </Project>

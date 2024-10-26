@@ -22,4 +22,10 @@
       <ProjectReference Include="..\..\Shared.Core\Shared.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Domain\" />
+      <Folder Include="Drivens\" />
+      <Folder Include="Drivings\" />
+    </ItemGroup>
+
 </Project>
